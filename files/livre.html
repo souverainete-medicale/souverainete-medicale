@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Livre — Souveraineté Médicale</title>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --bleu-nuit: #0A1628; --or: #C5A059; --blanc: #FFFFFF; --gris-clair: #F9F7F4; --gris-texte: #4A4A4A; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; color: var(--gris-texte); background: var(--gris-clair); line-height: 1.7; }
+        
+        /* Header fixe IDENTIQUE à index */
+        .header-top { background: var(--blanc); border-bottom: 3px solid var(--or); padding: 15px 40px; display: flex; justify-content: space-between; align-items: center; position: fixed; top: 0; width: 100%; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .logo { height: 60px; }
+        
+        /* Navigation bandeau en ligne IDENTIQUE */
+        .nav-container { display: flex; gap: 40px; }
+        .nav-link { text-decoration: none; color: var(--gris-texte); font-weight: 600; font-size: 0.95em; transition: all 0.3s; text-transform: uppercase; letter-spacing: 0.5px; padding-bottom: 3px; border-bottom: 3px solid transparent; white-space: nowrap; }
+        .nav-link:hover { color: var(--or); border-bottom-color: var(--or); }
+        .nav-link.active { color: var(--or); border-bottom-color: var(--or); }
+        
+        /* Espace pour header fixe */
+        .main-content { margin-top: 90px; padding: 60px 0; }
+        
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 40px; }
+        
+        h1 { font-family: 'Crimson Text', serif; font-size: clamp(2.5em, 5vw, 4em); color: var(--or); text-align: center; margin-bottom: 20px; font-weight: 700; }
+        h2 { font-family: 'Crimson Text', serif; font-size: clamp(1.8em, 3.5vw, 2.5em); color: var(--bleu-nuit); margin: 50px 0 30px; font-weight: 700; text-align: center; }
+        .subtitle { text-align: center; font-size: 1.3em; color: var(--or); margin-bottom: 50px; font-weight: 600; }
+        p { font-size: 1.15em; line-height: 1.9; margin-bottom: 25px; }
+        
+        /* Parties */
+        .partie { background: var(--blanc); border-left: 5px solid var(--or); padding: 40px; margin: 40px 0; }
+        .partie-header { display: flex; align-items: center; gap: 30px; margin-bottom: 25px; }
+        .partie-numero { font-family: 'Crimson Text', serif; font-size: 4em; font-weight: 700; color: var(--or); line-height: 1; min-width: 80px; text-align: center; }
+        .partie-titre { font-family: 'Crimson Text', serif; font-size: 2em; font-weight: 700; color: var(--bleu-nuit); }
+        .partie-desc { font-size: 1.15em; line-height: 1.8; margin-bottom: 20px; }
+        .partie-desc strong { color: var(--noir); }
+        .partie-themes { font-weight: 700; text-transform: uppercase; font-size: 1em; margin: 25px 0 15px; color: var(--bleu-nuit); letter-spacing: 0.5px; }
+        
+        ul { list-style: none; padding: 0; }
+        ul li { padding: 12px 0 12px 30px; position: relative; line-height: 1.7; }
+        ul li::before { content: '▸'; position: absolute; left: 0; color: var(--or); font-weight: 700; font-size: 1.2em; }
+        ul li strong { color: var(--noir); }
+        
+        .btn { display: inline-block; background: var(--or); color: var(--blanc); padding: 18px 45px; font-weight: 700; text-decoration: none; text-transform: uppercase; margin: 50px auto; display: block; width: fit-content; transition: all 0.3s; border: 3px solid var(--or); }
+        .btn:hover { background: var(--blanc); color: var(--or); transform: translateY(-2px); }
+        
+        footer { background: var(--bleu-nuit); color: var(--blanc); padding: 60px 40px; text-align: center; }
+        .footer-text strong { color: var(--or); }
+        .separator { width: 120px; height: 2px; background: var(--or); margin: 20px auto; }
+        
+        @media (max-width: 1024px) {
+            .nav-container { gap: 20px; }
+            .nav-link { font-size: 0.85em; }
+        }
+        
+        @media (max-width: 768px) {
+            .header-top { flex-direction: column; gap: 15px; padding: 15px 20px; }
+            .nav-container { flex-wrap: wrap; justify-content: center; gap: 15px; }
+            .partie-header { flex-direction: column; text-align: center; }
+            .main-content { margin-top: 140px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER IDENTIQUE À INDEX -->
+    <header class="header-top">
+        <a href="index.html" class="logo" style="text-decoration: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200" height="60">
+                <rect fill="#FFFFFF" x="2" y="2" width="596" height="196"/>
+                <rect fill="none" stroke="#C5A059" stroke-width="4" x="2" y="2" width="596" height="196"/>
+                <rect fill="none" stroke="#C5A059" stroke-width="4" x="8" y="8" width="584" height="184"/>
+                <path fill="#C5A059" d="M 300 47 L 306 55 L 300 63 L 294 55 Z"/>
+                <text fill="#C5A059" x="300" y="105" text-anchor="middle" font-family="Crimson Text, serif" font-weight="700" font-size="42" letter-spacing="4">SOUVERAINETÉ</text>
+                <text fill="#C5A059" x="300" y="155" text-anchor="middle" font-family="Crimson Text, serif" font-weight="700" font-size="42" letter-spacing="4">MÉDICALE</text>
+            </svg>
+        </div>
+        <nav class="nav-container">
+            <a href="livre.html" class="nav-link active">Le Livre</a>
+            <a href="co-ecriture.html" class="nav-link">Co-écriture</a>
+            <a href="a-propos.html" class="nav-link">À Propos</a>
+            <a href="ils-en-parlent.html" class="nav-link">Ils en parlent</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+    </header>
+    
+    <div class="main-content">
+        <div class="container">
+            <h1>Le Livre</h1>
+            <p class="subtitle">Un manuel de référence sur l'indépendance et la souveraineté du praticien</p>
+            
+            <p>
+                La formation médicale d'excellence en France se concentre sur l'acte clinique, 
+                délaissant souvent la maîtrise de l'écosystème qui l'entoure. Ce livre est conçu 
+                comme un pont entre le savoir-faire médical et les réalités stratégiques : gestion, 
+                gouvernance, enjeux de financement et dépendances industrielles.
+            </p>
+            
+            <h2>Architecture du Livre</h2>
+            
+            <!-- PARTIE I -->
+            <div class="partie">
+                <div class="partie-header">
+                    <div class="partie-numero">I</div>
+                    <h3 class="partie-titre">GENÈSE</h3>
+                </div>
+                <p class="partie-desc">
+                    <strong>L'ingénierie du modèle</strong> — Comprendre les mécanismes structurels 
+                    qui conditionnent votre installation et votre autonomie future.
+                </p>
+                <p class="partie-themes">Thématiques clés :</p>
+                <ul>
+                    <li><strong>SPFPL</strong> : Société de Participations Financières de Professions Libérales</li>
+                    <li><strong>SELARL</strong> : Choisir la forme juridique optimale</li>
+                    <li><strong>Installation</strong> : Décrypter les choix structurants</li>
+                    <li><strong>Diagnostic systémique</strong> : Identifier les forces en présence</li>
+                </ul>
+            </div>
+            
+            <!-- PARTIE II -->
+            <div class="partie">
+                <div class="partie-header">
+                    <div class="partie-numero">II</div>
+                    <h3 class="partie-titre">PILOTAGE</h3>
+                </div>
+                <p class="partie-desc">
+                    <strong>Le SRH (Seuil de Rentabilité Horaire)</strong> — Maîtriser vos flux financiers 
+                    et calculer votre rentabilité horaire pour ne plus jamais travailler à perte.
+                </p>
+                <p class="partie-themes">Thématiques clés :</p>
+                <ul>
+                    <li><strong>SRH (Seuil de Rentabilité Horaire)</strong> : Votre revenu minimum par heure</li>
+                    <li><strong>MAN (Marge sur Acte Net)</strong> : Rentabilité réelle après charges</li>
+                    <li><strong>Holding patrimoniale</strong> : Optimisation fiscale et protection</li>
+                    <li><strong>Trésorerie souveraine</strong> : Anticiper et piloter</li>
+                </ul>
+            </div>
+            
+            <!-- PARTIE III -->
+            <div class="partie">
+                <div class="partie-header">
+                    <div class="partie-numero">III</div>
+                    <h3 class="partie-titre">STRUCTURE</h3>
+                </div>
+                <p class="partie-desc">
+                    <strong>Le management et les RH</strong> — Construire une architecture juridique robuste 
+                    et piloter vos ressources humaines avec méthode.
+                </p>
+                <p class="partie-themes">Thématiques clés :</p>
+                <ul>
+                    <li><strong>RH (Ressources Humaines)</strong> : Recruter, fidéliser, former</li>
+                    <li><strong>Management</strong> : Piloter une équipe médicale avec rigueur</li>
+                    <li><strong>Leadership</strong> : Incarner l'autorité sans autoritarisme</li>
+                    <li><strong>Ingénierie contractuelle</strong> : Négocier en position de force</li>
+                </ul>
+            </div>
+            
+            <!-- PARTIE IV -->
+            <div class="partie">
+                <div class="partie-header">
+                    <div class="partie-numero">IV</div>
+                    <h3 class="partie-titre">LEVIERS</h3>
+                </div>
+                <p class="partie-desc">
+                    <strong>Innovation et souveraineté numérique</strong> — Déployer les outils technologiques 
+                    qui renforcent votre autonomie sans créer de nouvelles dépendances.
+                </p>
+                <p class="partie-themes">Thématiques clés :</p>
+                <ul>
+                    <li><strong>Intelligence Artificielle</strong> : L'IA comme assistant, pas remplaçant</li>
+                    <li><strong>Groupements d'achats</strong> : Mutualiser pour négocier en force</li>
+                    <li><strong>Souveraineté numérique</strong> : Propriété de vos données patients</li>
+                    <li><strong>Infrastructure indépendante</strong> : Choisir des outils libres</li>
+                </ul>
+            </div>
+            
+            <!-- PARTIE V -->
+            <div class="partie">
+                <div class="partie-header">
+                    <div class="partie-numero">V</div>
+                    <h3 class="partie-titre">TRANSMISSION</h3>
+                </div>
+                <p class="partie-desc">
+                    <strong>Pérennité et EBITDA Médical</strong> — Valoriser correctement votre cabinet 
+                    et préparer sa transmission dans le respect de vos valeurs.
+                </p>
+                <p class="partie-themes">Thématiques clés :</p>
+                <ul>
+                    <li><strong>EBITDA Médical</strong> : Calculer la valeur réelle de votre cabinet</li>
+                    <li><strong>SCI (Société Civile Immobilière)</strong> : Séparer mur et fonds</li>
+                    <li><strong>Valorisation de l'immatériel</strong> : Quantifier patientèle et réputation</li>
+                    <li><strong>Stratégies de succession</strong> : Anticiper la cession ou transmission</li>
+                </ul>
+            </div>
+            
+            <a href="contact.html" class="btn">Participer au Projet</a>
+        </div>
+    </div>
+    
+    <footer>
+        <div style="margin-bottom: 20px;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="80" height="80">
+                <rect fill="#FFFFFF" x="2" y="2" width="196" height="196"/>
+                <rect fill="none" stroke="#C5A059" stroke-width="4" x="2" y="2" width="196" height="196"/>
+                <rect fill="none" stroke="#C5A059" stroke-width="4" x="8" y="8" width="184" height="184"/>
+                <path fill="#C5A059" d="M 100 40 L 106 48 L 100 56 L 94 48 Z"/>
+                <text fill="#C5A059" x="100" y="125" text-anchor="middle" font-family="Crimson Text, serif" font-weight="700" font-size="72">SM</text>
+                <line x1="50" y1="145" x2="150" y2="145" stroke="#C5A059" stroke-width="2"/>
+                <path fill="#C5A059" d="M 100 170 L 106 178 L 100 186 L 94 178 Z"/>
+            </svg>
+        </div>
+        <p class="footer-text">Projet initié par <strong>Alexis Javouray</strong></p>
+        <div class="separator"></div>
+        <p style="font-size: 0.9em; opacity: 0.8;">© 2026 BLUE HOLDING — Diffusion soutenue techniquement par BLUE FILLER</p>
+    </footer>
+</body>
+</html>
